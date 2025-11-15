@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMULATOR_GUI", "EMULATOR_GUI.csproj", "{F78ABEB1-E1E8-43B5-95E0-E6A6EFC908EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HDRControlLibrary", "..\HDRControlLibrary\HDRControlLibrary.csproj", "{92561F9F-6064-4A75-8582-6088CF85A274}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F78ABEB1-E1E8-43B5-95E0-E6A6EFC908EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F78ABEB1-E1E8-43B5-95E0-E6A6EFC908EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F78ABEB1-E1E8-43B5-95E0-E6A6EFC908EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F78ABEB1-E1E8-43B5-95E0-E6A6EFC908EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92561F9F-6064-4A75-8582-6088CF85A274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92561F9F-6064-4A75-8582-6088CF85A274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92561F9F-6064-4A75-8582-6088CF85A274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92561F9F-6064-4A75-8582-6088CF85A274}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4741EE70-01AF-4562-8909-5CAA3CDF6D2E}
+	EndGlobalSection
+EndGlobal
