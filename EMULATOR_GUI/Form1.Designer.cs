@@ -29,26 +29,33 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            bEmg = new Button();
+            groupBox1 = new GroupBox();
             checkBox20 = new CheckBox();
+            checkBox2 = new CheckBox();
             checkBox19 = new CheckBox();
-            checkBox18 = new CheckBox();
-            checkBox17 = new CheckBox();
-            checkBox16 = new CheckBox();
-            checkBox15 = new CheckBox();
-            checkBox14 = new CheckBox();
-            checkBox13 = new CheckBox();
-            checkBox12 = new CheckBox();
-            checkBox11 = new CheckBox();
             checkBox10 = new CheckBox();
             checkBox9 = new CheckBox();
-            checkBox8 = new CheckBox();
-            checkBox7 = new CheckBox();
-            checkBox6 = new CheckBox();
-            checkBox5 = new CheckBox();
-            checkBox4 = new CheckBox();
-            checkBox3 = new CheckBox();
-            checkBox2 = new CheckBox();
             checkBox1 = new CheckBox();
+            checkBox11 = new CheckBox();
+            checkBox8 = new CheckBox();
+            checkBox18 = new CheckBox();
+            checkBox12 = new CheckBox();
+            checkBox7 = new CheckBox();
+            checkBox13 = new CheckBox();
+            checkBox6 = new CheckBox();
+            checkBox17 = new CheckBox();
+            checkBox14 = new CheckBox();
+            checkBox5 = new CheckBox();
+            checkBox3 = new CheckBox();
+            checkBox15 = new CheckBox();
+            checkBox4 = new CheckBox();
+            checkBox16 = new CheckBox();
+            label8 = new Label();
+            l_EMG = new WinFormsControlLibrary1.Indicator();
             label7 = new Label();
             l_XHome = new WinFormsControlLibrary1.Indicator();
             labelStatus = new Label();
@@ -69,8 +76,10 @@
             label1 = new Label();
             l_sOut = new WinFormsControlLibrary1.Indicator();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // splitContainer1
@@ -82,30 +91,17 @@
             // splitContainer1.Panel1
             // 
             splitContainer1.Panel1.BackColor = SystemColors.ActiveBorder;
+            splitContainer1.Panel1.Controls.Add(button3);
+            splitContainer1.Panel1.Controls.Add(button2);
+            splitContainer1.Panel1.Controls.Add(button1);
+            splitContainer1.Panel1.Controls.Add(bEmg);
+            splitContainer1.Panel1.Controls.Add(groupBox1);
             // 
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.BackColor = SystemColors.ActiveCaption;
-            splitContainer1.Panel2.Controls.Add(checkBox20);
-            splitContainer1.Panel2.Controls.Add(checkBox19);
-            splitContainer1.Panel2.Controls.Add(checkBox18);
-            splitContainer1.Panel2.Controls.Add(checkBox17);
-            splitContainer1.Panel2.Controls.Add(checkBox16);
-            splitContainer1.Panel2.Controls.Add(checkBox15);
-            splitContainer1.Panel2.Controls.Add(checkBox14);
-            splitContainer1.Panel2.Controls.Add(checkBox13);
-            splitContainer1.Panel2.Controls.Add(checkBox12);
-            splitContainer1.Panel2.Controls.Add(checkBox11);
-            splitContainer1.Panel2.Controls.Add(checkBox10);
-            splitContainer1.Panel2.Controls.Add(checkBox9);
-            splitContainer1.Panel2.Controls.Add(checkBox8);
-            splitContainer1.Panel2.Controls.Add(checkBox7);
-            splitContainer1.Panel2.Controls.Add(checkBox6);
-            splitContainer1.Panel2.Controls.Add(checkBox5);
-            splitContainer1.Panel2.Controls.Add(checkBox4);
-            splitContainer1.Panel2.Controls.Add(checkBox3);
-            splitContainer1.Panel2.Controls.Add(checkBox2);
-            splitContainer1.Panel2.Controls.Add(checkBox1);
+            splitContainer1.Panel2.Controls.Add(label8);
+            splitContainer1.Panel2.Controls.Add(l_EMG);
             splitContainer1.Panel2.Controls.Add(label7);
             splitContainer1.Panel2.Controls.Add(l_XHome);
             splitContainer1.Panel2.Controls.Add(labelStatus);
@@ -125,115 +121,110 @@
             splitContainer1.Panel2.Controls.Add(l_sOver);
             splitContainer1.Panel2.Controls.Add(label1);
             splitContainer1.Panel2.Controls.Add(l_sOut);
-            splitContainer1.Panel2.Paint += splitContainer1_Panel2_Paint;
             splitContainer1.Size = new Size(950, 551);
             splitContainer1.SplitterDistance = 316;
             splitContainer1.TabIndex = 0;
             // 
+            // button3
+            // 
+            button3.Location = new Point(12, 442);
+            button3.Name = "button3";
+            button3.Size = new Size(70, 73);
+            button3.TabIndex = 4;
+            button3.Text = "Main ON/ OFF";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(232, 339);
+            button2.Name = "button2";
+            button2.Size = new Size(70, 73);
+            button2.TabIndex = 3;
+            button2.Text = "Door Lock";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(122, 339);
+            button1.Name = "button1";
+            button1.Size = new Size(70, 73);
+            button1.TabIndex = 2;
+            button1.Text = "KeySw";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // bEmg
+            // 
+            bEmg.Location = new Point(12, 339);
+            bEmg.Name = "bEmg";
+            bEmg.Size = new Size(70, 73);
+            bEmg.TabIndex = 1;
+            bEmg.Text = "EMG";
+            bEmg.UseVisualStyleBackColor = true;
+            bEmg.Click += bEmg_Click;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(checkBox20);
+            groupBox1.Controls.Add(checkBox2);
+            groupBox1.Controls.Add(checkBox19);
+            groupBox1.Controls.Add(checkBox10);
+            groupBox1.Controls.Add(checkBox9);
+            groupBox1.Controls.Add(checkBox1);
+            groupBox1.Controls.Add(checkBox11);
+            groupBox1.Controls.Add(checkBox8);
+            groupBox1.Controls.Add(checkBox18);
+            groupBox1.Controls.Add(checkBox12);
+            groupBox1.Controls.Add(checkBox7);
+            groupBox1.Controls.Add(checkBox13);
+            groupBox1.Controls.Add(checkBox6);
+            groupBox1.Controls.Add(checkBox17);
+            groupBox1.Controls.Add(checkBox14);
+            groupBox1.Controls.Add(checkBox5);
+            groupBox1.Controls.Add(checkBox3);
+            groupBox1.Controls.Add(checkBox15);
+            groupBox1.Controls.Add(checkBox4);
+            groupBox1.Controls.Add(checkBox16);
+            groupBox1.Location = new Point(12, 9);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(291, 306);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Adapters";
+            // 
             // checkBox20
             // 
             checkBox20.AutoSize = true;
-            checkBox20.Location = new Point(520, 304);
+            checkBox20.Location = new Point(183, 261);
             checkBox20.Name = "checkBox20";
             checkBox20.Size = new Size(88, 19);
             checkBox20.TabIndex = 38;
             checkBox20.Text = "checkBox20";
             checkBox20.UseVisualStyleBackColor = true;
             // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(6, 61);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(82, 19);
+            checkBox2.TabIndex = 20;
+            checkBox2.Text = "checkBox2";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
             // checkBox19
             // 
             checkBox19.AutoSize = true;
-            checkBox19.Location = new Point(520, 279);
+            checkBox19.Location = new Point(183, 236);
             checkBox19.Name = "checkBox19";
             checkBox19.Size = new Size(88, 19);
             checkBox19.TabIndex = 37;
             checkBox19.Text = "checkBox19";
             checkBox19.UseVisualStyleBackColor = true;
             // 
-            // checkBox18
-            // 
-            checkBox18.AutoSize = true;
-            checkBox18.Location = new Point(520, 256);
-            checkBox18.Name = "checkBox18";
-            checkBox18.Size = new Size(88, 19);
-            checkBox18.TabIndex = 36;
-            checkBox18.Text = "checkBox18";
-            checkBox18.UseVisualStyleBackColor = true;
-            // 
-            // checkBox17
-            // 
-            checkBox17.AutoSize = true;
-            checkBox17.Location = new Point(520, 231);
-            checkBox17.Name = "checkBox17";
-            checkBox17.Size = new Size(88, 19);
-            checkBox17.TabIndex = 35;
-            checkBox17.Text = "checkBox17";
-            checkBox17.UseVisualStyleBackColor = true;
-            // 
-            // checkBox16
-            // 
-            checkBox16.AutoSize = true;
-            checkBox16.Location = new Point(520, 210);
-            checkBox16.Name = "checkBox16";
-            checkBox16.Size = new Size(88, 19);
-            checkBox16.TabIndex = 34;
-            checkBox16.Text = "checkBox16";
-            checkBox16.UseVisualStyleBackColor = true;
-            // 
-            // checkBox15
-            // 
-            checkBox15.AutoSize = true;
-            checkBox15.Location = new Point(520, 185);
-            checkBox15.Name = "checkBox15";
-            checkBox15.Size = new Size(88, 19);
-            checkBox15.TabIndex = 33;
-            checkBox15.Text = "checkBox15";
-            checkBox15.UseVisualStyleBackColor = true;
-            // 
-            // checkBox14
-            // 
-            checkBox14.AutoSize = true;
-            checkBox14.Location = new Point(520, 160);
-            checkBox14.Name = "checkBox14";
-            checkBox14.Size = new Size(88, 19);
-            checkBox14.TabIndex = 32;
-            checkBox14.Text = "checkBox14";
-            checkBox14.UseVisualStyleBackColor = true;
-            // 
-            // checkBox13
-            // 
-            checkBox13.AutoSize = true;
-            checkBox13.Location = new Point(520, 135);
-            checkBox13.Name = "checkBox13";
-            checkBox13.Size = new Size(88, 19);
-            checkBox13.TabIndex = 31;
-            checkBox13.Text = "checkBox13";
-            checkBox13.UseVisualStyleBackColor = true;
-            // 
-            // checkBox12
-            // 
-            checkBox12.AutoSize = true;
-            checkBox12.Location = new Point(520, 110);
-            checkBox12.Name = "checkBox12";
-            checkBox12.Size = new Size(88, 19);
-            checkBox12.TabIndex = 30;
-            checkBox12.Text = "checkBox12";
-            checkBox12.UseVisualStyleBackColor = true;
-            // 
-            // checkBox11
-            // 
-            checkBox11.AutoSize = true;
-            checkBox11.Location = new Point(520, 85);
-            checkBox11.Name = "checkBox11";
-            checkBox11.Size = new Size(88, 19);
-            checkBox11.TabIndex = 29;
-            checkBox11.Text = "checkBox11";
-            checkBox11.UseVisualStyleBackColor = true;
-            // 
             // checkBox10
             // 
             checkBox10.AutoSize = true;
-            checkBox10.Location = new Point(422, 310);
+            checkBox10.Location = new Point(6, 261);
             checkBox10.Name = "checkBox10";
             checkBox10.Size = new Size(88, 19);
             checkBox10.TabIndex = 28;
@@ -243,92 +234,179 @@
             // checkBox9
             // 
             checkBox9.AutoSize = true;
-            checkBox9.Location = new Point(422, 285);
+            checkBox9.Location = new Point(6, 236);
             checkBox9.Name = "checkBox9";
             checkBox9.Size = new Size(82, 19);
             checkBox9.TabIndex = 27;
             checkBox9.Text = "checkBox9";
             checkBox9.UseVisualStyleBackColor = true;
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(6, 36);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(82, 19);
+            checkBox1.TabIndex = 19;
+            checkBox1.Text = "checkBox1";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox11
+            // 
+            checkBox11.AutoSize = true;
+            checkBox11.Location = new Point(183, 42);
+            checkBox11.Name = "checkBox11";
+            checkBox11.Size = new Size(88, 19);
+            checkBox11.TabIndex = 29;
+            checkBox11.Text = "checkBox11";
+            checkBox11.UseVisualStyleBackColor = true;
+            // 
             // checkBox8
             // 
             checkBox8.AutoSize = true;
-            checkBox8.Location = new Point(422, 260);
+            checkBox8.Location = new Point(6, 211);
             checkBox8.Name = "checkBox8";
             checkBox8.Size = new Size(82, 19);
             checkBox8.TabIndex = 26;
             checkBox8.Text = "checkBox8";
             checkBox8.UseVisualStyleBackColor = true;
             // 
+            // checkBox18
+            // 
+            checkBox18.AutoSize = true;
+            checkBox18.Location = new Point(183, 213);
+            checkBox18.Name = "checkBox18";
+            checkBox18.Size = new Size(88, 19);
+            checkBox18.TabIndex = 36;
+            checkBox18.Text = "checkBox18";
+            checkBox18.UseVisualStyleBackColor = true;
+            // 
+            // checkBox12
+            // 
+            checkBox12.AutoSize = true;
+            checkBox12.Location = new Point(183, 67);
+            checkBox12.Name = "checkBox12";
+            checkBox12.Size = new Size(88, 19);
+            checkBox12.TabIndex = 30;
+            checkBox12.Text = "checkBox12";
+            checkBox12.UseVisualStyleBackColor = true;
+            // 
             // checkBox7
             // 
             checkBox7.AutoSize = true;
-            checkBox7.Location = new Point(422, 235);
+            checkBox7.Location = new Point(6, 186);
             checkBox7.Name = "checkBox7";
             checkBox7.Size = new Size(82, 19);
             checkBox7.TabIndex = 25;
             checkBox7.Text = "checkBox7";
             checkBox7.UseVisualStyleBackColor = true;
             // 
+            // checkBox13
+            // 
+            checkBox13.AutoSize = true;
+            checkBox13.Location = new Point(183, 92);
+            checkBox13.Name = "checkBox13";
+            checkBox13.Size = new Size(88, 19);
+            checkBox13.TabIndex = 31;
+            checkBox13.Text = "checkBox13";
+            checkBox13.UseVisualStyleBackColor = true;
+            // 
             // checkBox6
             // 
             checkBox6.AutoSize = true;
-            checkBox6.Location = new Point(422, 210);
+            checkBox6.Location = new Point(6, 161);
             checkBox6.Name = "checkBox6";
             checkBox6.Size = new Size(82, 19);
             checkBox6.TabIndex = 24;
             checkBox6.Text = "checkBox6";
             checkBox6.UseVisualStyleBackColor = true;
             // 
+            // checkBox17
+            // 
+            checkBox17.AutoSize = true;
+            checkBox17.Location = new Point(183, 188);
+            checkBox17.Name = "checkBox17";
+            checkBox17.Size = new Size(88, 19);
+            checkBox17.TabIndex = 35;
+            checkBox17.Text = "checkBox17";
+            checkBox17.UseVisualStyleBackColor = true;
+            // 
+            // checkBox14
+            // 
+            checkBox14.AutoSize = true;
+            checkBox14.Location = new Point(183, 117);
+            checkBox14.Name = "checkBox14";
+            checkBox14.Size = new Size(88, 19);
+            checkBox14.TabIndex = 32;
+            checkBox14.Text = "checkBox14";
+            checkBox14.UseVisualStyleBackColor = true;
+            // 
             // checkBox5
             // 
             checkBox5.AutoSize = true;
-            checkBox5.Location = new Point(422, 185);
+            checkBox5.Location = new Point(6, 136);
             checkBox5.Name = "checkBox5";
             checkBox5.Size = new Size(82, 19);
             checkBox5.TabIndex = 23;
             checkBox5.Text = "checkBox5";
             checkBox5.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
-            // 
-            checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(422, 160);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(82, 19);
-            checkBox4.TabIndex = 22;
-            checkBox4.Text = "checkBox4";
-            checkBox4.UseVisualStyleBackColor = true;
-            // 
             // checkBox3
             // 
             checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(422, 135);
+            checkBox3.Location = new Point(6, 86);
             checkBox3.Name = "checkBox3";
             checkBox3.Size = new Size(82, 19);
             checkBox3.TabIndex = 21;
             checkBox3.Text = "checkBox3";
             checkBox3.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkBox15
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(422, 110);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(82, 19);
-            checkBox2.TabIndex = 20;
-            checkBox2.Text = "checkBox2";
-            checkBox2.UseVisualStyleBackColor = true;
+            checkBox15.AutoSize = true;
+            checkBox15.Location = new Point(183, 142);
+            checkBox15.Name = "checkBox15";
+            checkBox15.Size = new Size(88, 19);
+            checkBox15.TabIndex = 33;
+            checkBox15.Text = "checkBox15";
+            checkBox15.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // checkBox4
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(422, 85);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(82, 19);
-            checkBox1.TabIndex = 19;
-            checkBox1.Text = "checkBox1";
-            checkBox1.UseVisualStyleBackColor = true;
+            checkBox4.AutoSize = true;
+            checkBox4.Location = new Point(6, 111);
+            checkBox4.Name = "checkBox4";
+            checkBox4.Size = new Size(82, 19);
+            checkBox4.TabIndex = 22;
+            checkBox4.Text = "checkBox4";
+            checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox16
+            // 
+            checkBox16.AutoSize = true;
+            checkBox16.Location = new Point(183, 167);
+            checkBox16.Name = "checkBox16";
+            checkBox16.Size = new Size(88, 19);
+            checkBox16.TabIndex = 34;
+            checkBox16.Text = "checkBox16";
+            checkBox16.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(541, 187);
+            label8.Name = "label8";
+            label8.Size = new Size(38, 15);
+            label8.TabIndex = 20;
+            label8.Text = "EMEG";
+            // 
+            // l_EMG
+            // 
+            l_EMG.Location = new Point(523, 113);
+            l_EMG.Name = "l_EMG";
+            l_EMG.Size = new Size(63, 63);
+            l_EMG.TabIndex = 19;
+            l_EMG.Value = false;
             // 
             // label7
             // 
@@ -504,10 +582,13 @@
             Controls.Add(splitContainer1);
             Name = "Form1";
             Text = "Form1";
+            splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
             splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -553,5 +634,12 @@
         private CheckBox checkBox3;
         private CheckBox checkBox2;
         private CheckBox checkBox1;
+        private GroupBox groupBox1;
+        private Button button1;
+        private Button bEmg;
+        private Button button2;
+        private Button button3;
+        private Label label8;
+        private WinFormsControlLibrary1.Indicator l_EMG;
     }
 }
